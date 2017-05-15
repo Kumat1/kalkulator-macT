@@ -124,100 +124,96 @@ class AplikasiKalkulator extends JFrame {
 
         //buttons
         one = new JButton("1");
-        one.setBackground(Color.darkGray);
-        one.setForeground(Color.white);
+        one.setBackground(Color.white);
+        one.setForeground(Color.black);
 
         two= new JButton("2");
-        two.setBackground(Color.darkGray);
-        two.setForeground(Color.white);
+        two.setBackground(Color.white);
+        two.setForeground(Color.black);
 
         three = new JButton("3");
-        three.setBackground(Color.darkGray);
-        three.setForeground(Color.white);
+        three.setBackground(Color.white);
+        three.setForeground(Color.black);
 
         four = new JButton("4");
-        four.setBackground(Color.darkGray);
-        four.setForeground(Color.white);
+        four.setBackground(Color.white);
+        four.setForeground(Color.black);
 
         five = new JButton("5");
-        five.setBackground(Color.darkGray);
-        five.setForeground(Color.white);
+        five.setBackground(Color.white);
+        five.setForeground(Color.black);
 
         six = new JButton("6");
-        six.setBackground(Color.darkGray);
-        six.setForeground(Color.white);
+        six.setBackground(Color.white);
+        six.setForeground(Color.black);
 
         seven = new JButton("7");
-        seven.setBackground(Color.darkGray);
-        seven.setForeground(Color.white);
+        seven.setBackground(Color.white);
+        seven.setForeground(Color.black);
 
         eight = new JButton("8");
-        eight.setBackground(Color.darkGray);
-        eight.setForeground(Color.white);
+        eight.setBackground(Color.white);
+        eight.setForeground(Color.black);
 
         nine = new JButton("9");
-        nine.setBackground(Color.darkGray);
-        nine.setForeground(Color.white);
+        nine.setBackground(Color.white);
+        nine.setForeground(Color.black);
 
         zero = new JButton("0");
-        zero.setBackground(Color.darkGray);
-        zero.setForeground(Color.white);
-
-        zerozero = new JButton( "00");
-        zerozero.setBackground(Color.darkGray);
-        zerozero.setForeground(Color.white);
+        zero.setBackground(Color.white);
+        zero.setForeground(Color.black);
 
         posmin = new JButton("±");
-        posmin.setBackground(Color.darkGray);
-        posmin.setForeground(Color.white);
+        posmin.setBackground(Color.black);
+        posmin.setForeground(Color.red);
         posmin.setActionCommand("tmblPosmin");
         posmin.addActionListener(actionButton);
 
         smdgn = new JButton("=");
-        smdgn.setBackground(Color.darkGray);
-        smdgn.setForeground(Color.white);
+        smdgn.setBackground(Color.black);
+        smdgn.setForeground(Color.red);
         smdgn.setActionCommand("tmblSmdgn");
         smdgn.addActionListener(actionButton);
 
         tmbh = new JButton("+");
-        tmbh.setBackground(Color.darkGray);
-        tmbh.setForeground(Color.white);
+        tmbh.setBackground(Color.black);
+        tmbh.setForeground(Color.red);
         tmbh.setActionCommand("tmblTmbh");
         tmbh.addActionListener(actionButton);
 
         krg = new JButton("-");
-        krg.setBackground(Color.darkGray);
-        krg.setForeground(Color.white);
+        krg.setBackground(Color.black);
+        krg.setForeground(Color.red);
         krg.setActionCommand("tmblKrg");
         krg.addActionListener(actionButton);
 
         kali = new JButton("×");
-        kali.setBackground(Color.darkGray);
-        kali.setForeground(Color.white);
+        kali.setBackground(Color.black);
+        kali.setForeground(Color.red);
         kali.setActionCommand("tmblKali");
         kali.addActionListener(actionButton);
 
         bagi = new JButton("÷");
-        bagi.setBackground(Color.darkGray);
-        bagi.setForeground(Color.white);
+        bagi.setBackground(Color.black);
+        bagi.setForeground(Color.red);
         bagi.setActionCommand("tmblBagi");
         bagi.addActionListener(actionButton);
 
         ce = new JButton("CE");
-        ce.setBackground(Color.darkGray);
-        ce.setForeground(Color.white);
+        ce.setBackground(Color.black);
+        ce.setForeground(Color.red);
         ce.setActionCommand("tmblCE");
         ce.addActionListener(actionButton);
 
         c = new JButton("C");
-        c.setBackground(Color.darkGray);
-        c.setForeground(Color.white);
+        c.setBackground(Color.black);
+        c.setForeground(Color.red);
         c.setActionCommand("tmblC");
         c.addActionListener(actionButton);
 
         del = new JButton("←");
-        del.setBackground(Color.darkGray);
-        del.setForeground(Color.white);
+        del.setBackground(Color.black);
+        del.setForeground(Color.red);
         del.setActionCommand("delete");
         del.addActionListener(actionButton);
 
@@ -252,9 +248,6 @@ class AplikasiKalkulator extends JFrame {
         //tombol 0
         zero.setActionCommand("tmbl0");
         zero.addActionListener(actionButton);
-        //tombol 00
-        zerozero.setActionCommand("tmbl00");
-        zerozero.addActionListener(actionButton);
 
         //constraints
         GridBagConstraints constraints = new GridBagConstraints();
@@ -277,7 +270,7 @@ class AplikasiKalkulator extends JFrame {
         constraints.gridy=7;
         constraints.gridx=3;
 
-        panelButtons.add(zerozero, constraints);
+//        panelButtons.add(zerozero, constraints);
 
         constraints.gridheight = 1;
         constraints.gridwidth = 1;
@@ -416,6 +409,11 @@ class AplikasiKalkulator extends JFrame {
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 
+    public static void main(String[] args)
+    {
+        AplikasiKalkulator kalk = new AplikasiKalkulator();
+    }
+
     private void display()
     {
         String textDisplay = "";
@@ -470,11 +468,6 @@ class AplikasiKalkulator extends JFrame {
             }
         }
         return displayNilai;
-    }
-
-    public static void main(String[] args)
-    {
-        AplikasiKalkulator kalk = new AplikasiKalkulator();
     }
 }
 
